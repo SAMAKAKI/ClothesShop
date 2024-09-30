@@ -1,0 +1,46 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+
+.swiper{
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+  background: #fc466b !important;
+  background: -webkit-linear-gradient(30deg, #EF4444, #1D4ED8) !important;
+  background: linear-gradient(30deg, #EF4444, #1D4ED8) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+.swiper-button-next{
+  right: 50px !important;
+}
+
+.swiper-button-prev{
+  left: 50px !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-weight: 600;
+}
+
+.swiper-pagination-bullet-active{
+  background: #fc466b !important;
+  background: -webkit-linear-gradient(30deg, #EF4444, #1D4ED8) !important;
+  background: linear-gradient(45deg, #EF4444, #1D4ED8) !important;
+}
+
+.swiper-pagination-bullet{
+  background-color: rgb(216, 66, 96) !important;
+}
