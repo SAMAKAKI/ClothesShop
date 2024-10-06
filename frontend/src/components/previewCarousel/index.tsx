@@ -1,31 +1,33 @@
 import React from 'react'
-import { Navigation, Pagination, A11y } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import { SwiperElement } from '../swiperElement';
 
 export const PreviewCarousel: React.FC = () => {
   return (
     <Swiper
       className='mt-[100px]'
-      modules={[Navigation, Pagination, A11y]}
+      modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: true
+      }}
+      rewind
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>
-        <div className="w-full h-[500px] bg-zinc-800/50"></div>
+        <SwiperElement description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur voluptate eos nihil, possimus quis, veritatis maxime similique dolores voluptates iste debitis fugit neque repudiandae, tenetur numquam obcaecati delectus! ...' title='NIKE Jordan 4 Retro - Thunder' price={1200.00} stars={5} colors={['#ffa567', '#aa34ff', '#fadbef']} img={'/jordan.png'}/>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="w-full h-[500px] bg-red-500"></div></SwiperSlide>
-      <SwiperSlide>
-        <div className="w-full h-[500px] bg-green-500"></div></SwiperSlide>
-      <SwiperSlide>
-        <div className="w-full h-[500px] bg-blue-500"></div></SwiperSlide>
+        <SwiperElement description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur voluptate eos nihil, possimus quis, veritatis maxime similique dolores voluptates iste debitis fugit neque repudiandae, tenetur numquam obcaecati delectus! ...' title='NIKE Jordan 4 Retro - Thunder' price={1200.00} stars={5} colors={['#ffa567', '#aa34ff', '#fadbef']} img={'/jordan.png'}/>
+      </SwiperSlide>
+      
     </Swiper>
   )
 }

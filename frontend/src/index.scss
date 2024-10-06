@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *{
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 .swiper{
@@ -16,19 +16,15 @@
 
 .swiper-button-prev,
 .swiper-button-next{
-  background: #fc466b !important;
-  background: -webkit-linear-gradient(30deg, #EF4444, #1D4ED8) !important;
-  background: linear-gradient(30deg, #EF4444, #1D4ED8) !important;
-  -webkit-background-clip: text !important;
-  color: transparent !important;
+  color: rgb(39 39 42 / 0.5) !important;
 }
 
 .swiper-button-next{
-  right: 50px !important;
+  right: 30px !important;
 }
 
 .swiper-button-prev{
-  left: 50px !important;
+  left: 30px !important;
 }
 
 .swiper-button-prev:after, .swiper-button-next:after{
@@ -36,11 +32,13 @@
 }
 
 .swiper-pagination-bullet-active{
-  background: #fc466b !important;
-  background: -webkit-linear-gradient(30deg, #EF4444, #1D4ED8) !important;
-  background: linear-gradient(45deg, #EF4444, #1D4ED8) !important;
+  background: rgb(39 39 42 / 0.5) !important;
 }
 
 .swiper-pagination-bullet{
-  background-color: rgb(216, 66, 96) !important;
+  background-color: rgb(39 39 42 / 0.5) !important;
+}
+
+.MuiRating-root{
+  font-size: 40px !important;
 }
