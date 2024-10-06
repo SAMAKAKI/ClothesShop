@@ -1,0 +1,104 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradientBg {
+  background: linear-gradient(135deg, #fbae3c, #cd5b69, #5c3c64, #0d1721);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  -webkit-animation: gradientShift 5s ease infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-out;
+  -webkit-animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeInReversed {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+.fadeInReversed {
+  animation: fadeInReversed 0.8s ease-out;
+  -webkit-animation: fadeInReversed 0.8s ease-out;
+}
+
+@keyframes fadeInImg {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+
+.fadeInReversed {
+  animation: fadeInImg 0.8s ease-out;
+  -webkit-animation: fadeInImg 0.8s ease-out;
+}
+
+#title{
+  &::before{
+    content: '';
+  }
+}
+
+.buttonBuy{
+  background: #fc466b;
+  background: -webkit-linear-gradient(30deg, #EF4444, #1D4ED8);
+  background: linear-gradient(30deg, #EF4444, #1D4ED8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
