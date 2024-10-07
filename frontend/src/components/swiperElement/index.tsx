@@ -1,8 +1,9 @@
 import styles from "./swiperElement.module.scss";
-import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaFire } from "react-icons/fa6";
+import { Rating, Star } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 interface SwiperElementProps {
   title: string;
@@ -11,6 +12,12 @@ interface SwiperElementProps {
   stars: number;
   colors: string[];
   img: string
+}
+
+const myStyles = {
+  itemShapes: Star,
+  activeFillColor: '#ffb700',
+  inactiveFillColor: '#fbf1a9',
 }
 
 export const SwiperElement: React.FC<SwiperElementProps> = ({title, description, price, stars, colors, img}) => {
@@ -196,7 +203,7 @@ export const SwiperElement: React.FC<SwiperElementProps> = ({title, description,
         />
       </div>
       <div className={`${styles.fadeIn} flex items-center gap-5 flex-col z-10 w-[23%]`}>
-        <Rating name={`${title.replace(/\s/g, "")}-rating-carousel`} defaultValue={stars} readOnly/>
+        <Rating value={stars} readOnly itemStyles={myStyles} style={{width: '200px'}}/>
         <p className="text-white text-3xl font-mono font-semibold">${price}</p>
         <Link
           to={''}
