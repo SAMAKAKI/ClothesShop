@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   const location = useLocation()
   
   return (
-    <div className='w-11/12 left-1/2 -translate-x-1/2 rounded-3xl mt-5 px-10 flex justify-between items-center bg-zinc-800/50 backdrop-blur-[2px] fixed z-10'>
+    <div className='w-11/12 left-1/2 -translate-x-1/2 rounded-3xl mt-5 px-10 flex justify-between items-center bg-zinc-800/50 backdrop-blur-[2px] fixed z-50'>
       <h1 className={`${styles.logo}`}>SAMAKAKI</h1>
       <div className='flex justify-center items-center gap-10 text-xl text-white capitalize'>
         <Link to={'/'} className={`${location.pathname === '/' ? styles.menuItemActive : styles.menuItem}`}>home</Link>

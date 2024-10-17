@@ -11,7 +11,6 @@ export const PreviewCarousel: React.FC = () => {
     <Swiper
       className='mt-[100px]'
       modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={50}
       slidesPerView={1}
       navigation
       autoplay={{
@@ -20,6 +19,7 @@ export const PreviewCarousel: React.FC = () => {
       }}
       rewind
       pagination={{ clickable: true }}
+      loop
     >
       <SwiperSlide>
         <SwiperElement description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur voluptate eos nihil, possimus quis, veritatis maxime similique dolores voluptates iste debitis fugit neque repudiandae, tenetur numquam obcaecati delectus! ...' title='NIKE Jordan 4 Retro - Thunder' price={1200.00} stars={5} colors={['#ffa567', '#aa34ff', '#fadbef']} img={'/jordan.png'}/>
